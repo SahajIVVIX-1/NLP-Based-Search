@@ -1,0 +1,14 @@
+# Neural Language Representations and Distributed Word Embeddings
+
+Classical lexical models suffer from severe orthogonality: two synonymous words like 'physician' and 'doctor' have orthogonal vectors in a standard one-hot or TF-IDF space, yielding zero similarity.
+
+Distributed representations solve this bottleneck by mapping vocabulary items into low-dimensional continuous dense vector spaces (e.g., 300 dimensions) based on the distributional hypothesis: words that occur in similar contexts have similar meanings.
+
+Foundational embedding frameworks include:
+- Word2Vec: Developed by Mikolov et al. Uses two architectures:
+  1. Continuous Bag of Words (CBOW): Predicts a target word given surrounding context tokens.
+  2. Skip-Gram with Negative Sampling: Predicts context words given a central target word.
+- GloVe (Global Vectors): Factorizes global word co-occurrence matrices, combining global matrix factorization with local context window methods.
+- FastText: Extends Word2Vec to subword character n-grams, enabling robust vector representations for morphologically rich languages and out-of-vocabulary words.
+
+Sequential neural networks, such as Recurrent Neural Networks (RNNs) and Long Short-Term Memory (LSTM) networks, subsequently introduced state transitions to process variable-length text sequences while combating vanishing and exploding gradients.

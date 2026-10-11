@@ -1,0 +1,14 @@
+# Information Retrieval Architectures and Ranked Search
+
+Information Retrieval (IR) systems are designed to retrieve relevant unstructured documents from massive data repositories in response to user queries.
+
+Central to IR indexing is the inverted index data structure, which maps vocabulary terms to postings lists containing document identifiers and term frequencies. When a user submits an ad-hoc query, the search engine looks up postings lists, scores candidates, and delivers a ranked list of top-K documents.
+
+Evaluation of retrieval effectiveness depends on standard statistical benchmarks:
+- Precision: The fraction of retrieved documents that are truly relevant to the information need.
+- Recall: The fraction of all relevant documents in the collection that were successfully retrieved.
+- F1 Score: The harmonic mean of precision and recall.
+- Mean Average Precision (MAP): Computes average precision across multiple recall levels and queries.
+- Normalized Discounted Cumulative Gain (NDCG): Accounts for graded relevance and rank positions.
+
+A crucial challenge in classical IR is snippet extraction and result presentation. Modern search engines generate dynamic snippets that extract the highest density query window and highlight matching tokens, enabling users to rapidly judge relevance before opening documents.

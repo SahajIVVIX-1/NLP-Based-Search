@@ -1,0 +1,15 @@
+# Transformer Architectures and Self-Attention Mechanisms
+
+The introduction of the Transformer architecture by Vaswani et al. in 'Attention Is All You Need' transformed modern computational linguistics by discarding recurrent connections in favor of self-attention.
+
+The core mechanism is Scaled Dot-Product Attention:
+Attention(Q, K, V) = softmax((Q * K^T) / sqrt(d_k)) * V
+
+where Q represents queries, K represents keys, and V represents values. Multi-Head Attention allows the model to simultaneously attend to information from different representation subspaces at different positions.
+
+Key models derived from Transformers:
+1. BERT (Bidirectional Encoder Representations from Transformers): A masked language model trained bidirectionally to generate deep contextualized representations. Widely employed for dense passage retrieval, semantic search, and classification.
+2. GPT (Generative Pre-trained Transformer): An autoregressive decoder trained with causal language modeling for generation and in-context learning.
+3. Sentence-BERT (SBERT): Modifies BERT using Siamese and triplet network structures to produce semantically meaningful dense passage embeddings for sub-millisecond semantic search.
+
+Hybrid Search systems in modern industrial search engines combine classical lexical TF-IDF / BM25 inverted indices with dense SBERT neural embeddings using Reciprocal Rank Fusion (RRF).

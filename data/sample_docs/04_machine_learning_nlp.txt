@@ -1,0 +1,10 @@
+# Machine Learning Paradigms in Natural Language Processing
+
+Before modern deep learning, statistical machine learning algorithms were the backbone of computational language understanding.
+
+In text classification, documents are represented as high-dimensional feature vectors derived from bag-of-words or TF-IDF weights:
+1. Naive Bayes Classifier: Applies Bayes' theorem with the strong independence assumption that features are conditionally independent given the class label. Despite this unrealistic simplification, Multinomial Naive Bayes performs remarkably well for spam filtering and sentiment polarity detection.
+2. Logistic Regression: Models the posterior probability of class categories using a sigmoid or softmax link function, learning optimal feature coefficients through cross-entropy loss minimization.
+3. Support Vector Machines (SVM): Constructs hyperplanes that maximize the geometric margin between text classes. SVMs with linear kernels excel in sparse, high-dimensional text spaces.
+
+Feature engineering strategies commonly incorporate n-grams (contiguous sequences of n words) to capture short local collocations like 'ice cream' or 'machine learning', addressing one of the primary weaknesses of unigram bag-of-words models.

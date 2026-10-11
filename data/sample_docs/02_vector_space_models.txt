@@ -1,0 +1,19 @@
+# Vector Space Models and Term Weighting in Information Retrieval
+
+The Vector Space Model (VSM), pioneered by Gerard Salton, is an algebraic framework for representing textual documents as multi-dimensional vectors in a geometric space defined by the vocabulary.
+
+In the standard Bag of Words (BoW) paradigm, word order and grammatical syntax are discarded, preserving only the occurrences of vocabulary terms. To quantify the relevance of a document to an ad-hoc query, terms are assigned weights.
+
+Term Frequency (TF) measures how frequently a term occurs within a specific document:
+TF(t, d) = count(t, d)
+
+However, raw term frequency overvalues common terms. Inverse Document Frequency (IDF) mitigates this by penalizing terms that appear across many documents in the corpus:
+IDF(t, D) = ln((1 + |D|) / (1 + df(t))) + 1
+
+The composite TF-IDF score balances local relevance against global distinctiveness:
+TF-IDF(t, d) = TF(t, d) * IDF(t, D)
+
+To eliminate bias favoring longer documents, vectors are projected onto a unit sphere using Euclidean L2 normalization. The similarity between a query vector and a document vector is measured by the cosine of the angle between them:
+Cosine Similarity = (q . d) / (||q|| * ||d||)
+
+When vectors are normalized to unit length, cosine similarity simplifies directly to the Euclidean inner product.

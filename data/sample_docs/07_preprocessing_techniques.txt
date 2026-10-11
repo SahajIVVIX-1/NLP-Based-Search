@@ -1,0 +1,11 @@
+# Computational Preprocessing Techniques and Lexical Normalization
+
+Text preprocessing transforms heterogeneous natural language corpora into structured representations suitable for statistical modeling.
+
+Fundamental preprocessing operations include:
+1. Punctuation Filtering and Case Folding: Removing typographic artifacts and converting characters to lowercase ensures uniform token matching across diverse orthographic styles.
+2. Stopword Elimination: Eliminating functional closed-class words (prepositions, conjunctions, auxiliary verbs) concentrates statistical mass on topical content words. However, in tasks like phrase searching or sentiment analysis (e.g., 'not good'), aggressive stopword deletion can alter semantics.
+3. Stemming vs Lemmatization:
+   - Stemming operates heuristically by stripping common suffixes (e.g., Porter Stemmer rules for -ing, -ed, -s). While fast and effective for information retrieval recall, stemming can cause over-stemming ('organization' -> 'organ') or under-stemming.
+   - Lemmatization utilizes morphological analysis and dictionary lookups (e.g., WordNet) to return true canonical dictionary headwords (lemmas), accounting for part-of-speech context (e.g., 'better' -> 'good', 'ran' -> 'run').
+4. Vocabulary Sparsity: Natural language vocabularies exhibit severe sparsity due to Zipfian long-tail distributions, where a few words occur billions of times and millions of words occur only once.
